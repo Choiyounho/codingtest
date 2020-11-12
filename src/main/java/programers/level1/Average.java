@@ -2,7 +2,7 @@ package programers.level1;
 
 import java.util.Arrays;
 
-public class Average {
+public class  Average {
 
     public static double getAverage(int[] arr) {
         double sum = 0;

@@ -4,6 +4,7 @@ public class GetMiddleString {
 
     public static String getMiddleString(String input) {
         StringBuilder mid = new StringBuilder();
+
         if (input.length() % 2 != 0) {
             return mid.append(input.charAt(input.length() / 2)).toString();
         }

@@ -3,6 +3,7 @@ package programers.level1;
 public class StringHandling {
 
     public static boolean onlyLetter(String input) {
+
         if (input.length() == 4 || input.length() == 6) {
             if (isNumeric(input)) {
                 return true;

@@ -1,7 +1,5 @@
 package programers.level1;
 
-import java.util.*;
-
 public class StrangeString {
 
     public String solution(String s) {

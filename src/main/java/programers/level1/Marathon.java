@@ -1,25 +1,39 @@
 package programers.level1;
 
 import java.util.Arrays;
-import java.util.Objects;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Marathon {
 
     public String solution(String[] participant, String[] completion) {
-        String[] answer = {null};
+        Map<Integer, String> participantMap = new HashMap<>();
+        Map<Integer, String> completionMap = new HashMap<>();
+
+        Arrays.sort(participant);
+        Arrays.sort(completion);
 
         for (int i = 0; i < participant.length; i++) {
-            for (int j = 0; j < completion.length; j++) {
-                if (participant[i] == completion[j]) {
-                    participant[i] = null;
-                    completion[j] = null;
-                }
+            participantMap.put(i, participant[i]);
+        }
+
+        for (int j = 0; j < completion.length; j++) {
+            completionMap.put(j, completion[j]);
+        }
+
+        String answer = "";
+        for (int k = 0; k < completion.length; k++) {
+            if (!(participantMap.get(k).equals(completionMap.get(k)))) {
+                answer = participantMap.get(k);
+                break;
             }
         }
 
-        Arrays.stream(participant).filter(Objects::nonNull).forEach(l -> answer[0] = l);
+        if (answer.equals("")) {
+            answer = participantMap.get(participant.length - 1);
+        }
 
-        return answer[0];
+        return answer;
     }
 
     public String solution2(String[] participant, String[] completion) {

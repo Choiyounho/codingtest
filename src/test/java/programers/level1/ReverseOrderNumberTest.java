@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-class ReverseOrderTest {
+class ReverseOrderNumberTest {
 
     @Test
     @DisplayName("Java-Level1 : 정수 내림차순으로 배치하기")
     void test() {
-        ReverseOrder reverseOrder = new ReverseOrder();
+        ReverseOrderNumber reverseOrderNumber = new ReverseOrderNumber();
 
-        assertThat(reverseOrder.solution(118372)).isEqualTo(873211);
+        assertThat(reverseOrderNumber.solution(118372)).isEqualTo(873211);
     }
 
 }

@@ -4,14 +4,23 @@ package programers.level1;
 public class PlusDigit {
 
     public int solution(int n) {
-        String number =  "" + n;
-        String[] numbers = number.split("");
+        String[] numbers = splitNumbers(n);
 
+        return addParseInteger(numbers);
+    }
+
+    private String[] splitNumbers(int n) {
+        String number = String.valueOf(n);
+        String[] numbers = number.split("");
+        return numbers;
+    }
+
+    private int addParseInteger(String[] numbers) {
         int answer = 0;
+
         for (String i : numbers) {
             answer += Integer.parseInt(i);
         }
-
         return answer;
     }
 

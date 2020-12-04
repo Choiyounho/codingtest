@@ -3,6 +3,7 @@ package programers.level1;
 import java.util.ArrayList;
 import java.util.List;
 
+// 크레인 인형 뽑기
 public class Crane {
 
     public int solution(int[][] board, int[] moves) {

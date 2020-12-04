@@ -13,7 +13,9 @@ public class RemoveSmallestNumber {
             return new int[]{-1};
         }
 
-        List<Integer> numbers = Arrays.stream(arr).boxed().collect(Collectors.toList());
+        List<Integer> numbers = Arrays.stream(arr)
+                .boxed()
+                .collect(Collectors.toList());
 
         Integer min = Collections.min(numbers);
 
@@ -21,6 +23,10 @@ public class RemoveSmallestNumber {
             numbers.remove(min);
         }
 
+        return calculateNumbers(numbers);
+    }
+
+    private int[] calculateNumbers(List<Integer> numbers) {
         int[] answer = new int[numbers.size()];
 
         for (int k = 0; k < numbers.size(); k++) {

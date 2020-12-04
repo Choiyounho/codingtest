@@ -10,11 +10,7 @@ public class HarshadNumber {
             sumDigit += x % 10;
             x /= 10;
         }
-        if (init % sumDigit == 0) {
-            return true;
-        }
-
-        return false;
+        return init % sumDigit == 0;
     }
 
 }

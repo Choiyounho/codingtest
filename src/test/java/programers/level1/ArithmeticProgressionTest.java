@@ -12,7 +12,7 @@ class ArithmeticProgressionTest {
     void test() {
         ArithmeticProgression arithmeticProgression = new ArithmeticProgression();
 
-        assertThat(arithmeticProgression.solution(2, 5)).isEqualTo(new long[]{2,4,6,8,10});
+        assertThat(arithmeticProgression.solution(2, 5)).isEqualTo(new long[]{2, 4, 6, 8, 10});
     }
 
 }

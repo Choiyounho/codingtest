@@ -10,11 +10,11 @@ public class ReverseOrderString {
         String[] strings = s.split("");
 
         Arrays.sort(strings, Comparator.reverseOrder());
-        String answer = "";
-        for (int i = 0; i < strings.length; i++) {
-            answer += strings[i];
+        StringBuilder answer = new StringBuilder();
+        for (String string : strings) {
+            answer.append(string);
         }
-        return answer;
+        return answer.toString();
     }
 
     public String solution2(String s) {

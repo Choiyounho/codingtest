@@ -14,7 +14,7 @@ public class DesiredNumber {
         System.out.print(">>> ");
 
         int desiredNumber = SCANNER.nextInt();
-        
+
         getResult(desiredNumber);
     }
 
@@ -27,22 +27,18 @@ public class DesiredNumber {
             if (isOddNumber(number)) {
                 sum += number;
             }
-            if (isEvenNumber(number)) {
-                sum -= number;
-            }
             if (isSameNumber(sum, result)) {
                 System.out.println(number);
                 break;
+            }
+            if (!isOddNumber(number)) {
+                sum -= number;
             }
         }
     }
 
     private static boolean isOddNumber(int number) {
         return number % 2 != 0;
-    }
-
-    private static boolean isEvenNumber(int number) {
-        return number % 2 == 0;
     }
 
     private static boolean isSameNumber(int number, int number1) {

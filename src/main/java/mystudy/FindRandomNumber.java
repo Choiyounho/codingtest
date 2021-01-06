@@ -37,17 +37,17 @@ public class FindRandomNumber {
                 count++;
                 continue;
             }
+            if (isAnswer(input, result)) {
+                count++;
+                break;
+            }
             if (isSmall(input, result)) {
                 count++;
                 System.out.println("Up");
             }
-            if (isBigger(input, result)) {
+            if (!isSmall(input, result)) {
                 count++;
                 System.out.println("Down");
-            }
-            if (isAnswer(input, result)) {
-                count++;
-                break;
             }
         }
         System.out.println("정답 입니다.!");
@@ -60,10 +60,6 @@ public class FindRandomNumber {
 
     private static boolean isSmall(int input, int result) {
         return input < result;
-    }
-
-    private static boolean isBigger(int input, int result) {
-        return input > result;
     }
 
     private static boolean isAnswer(int input, int result) {

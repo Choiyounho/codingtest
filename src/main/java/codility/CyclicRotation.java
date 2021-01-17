@@ -1,18 +1,30 @@
 package codility;
 
-import java.util.Arrays;
-
+/*
+    로테이션 수 만큼 배열 이동
+    맨 마지막 요소는 가장 앞으로 이동
+ */
 public class CyclicRotation {
 
-    public static void main(String[] args) {
-        int[] numbers = {3, 8, 9, 7, 6};
-        int rotation = 3;
+    public int[] solution(int[] numbers, int rotation) {
+        int size = numbers.length;
+        int[] temp = new int[size];
 
-        CyclicRotation cyclicRotation = new CyclicRotation();
-        System.out.println(Arrays.toString(cyclicRotation.solution(numbers, rotation)));
+        for (int i = 0; i < size; i++) {
+            temp[convertIndex(i + rotation, size)] = numbers[i];
+        }
+
+        return temp;
     }
 
-    public int[] solution(int[] numbers, int rotation) {
+    private int convertIndex(int number, int size) {
+        if (number > size - 1) {
+            return number % size;
+        }
+        return number;
+    }
+
+    public int[] solution1(int[] numbers, int rotation) {
         int length = numbers.length;
         int cycle = rotation % length;
 

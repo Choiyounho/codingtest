@@ -25,6 +25,10 @@ public class CyclicRotation {
     }
 
     public int[] solution1(int[] numbers, int rotation) {
+        if (numbers.length == 0) {
+            return new int[]{};
+        }
+
         int length = numbers.length;
         int cycle = rotation % length;
 

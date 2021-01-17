@@ -18,7 +18,7 @@ class CyclicRotationTest {
     }
 
     @Test
-    @DisplayName("Java-Codility : CyclicRotation - 87%, TIME OUT")
+    @DisplayName("Java-Codility : CyclicRotation - 100%, 매우 비효율적인 코드")
     void solution1() {
         assertThat(cyclicRotation.solution1(numbers, rotation)).isEqualTo(new int[]{9, 7, 6, 3, 8});
     }

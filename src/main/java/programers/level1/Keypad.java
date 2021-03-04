@@ -3,6 +3,7 @@ package programers.level1;
 import java.util.HashMap;
 import java.util.Map;
 
+// 2020 카카오 인턴십 키패드 누르기
 public class Keypad {
 
     public String solution(int[] numbers, String hand) {

@@ -1,5 +1,6 @@
 package programers.level1;
 
+// 내적
 public class DotProduct {
 
     public int solution(int[] a, int[] b) {

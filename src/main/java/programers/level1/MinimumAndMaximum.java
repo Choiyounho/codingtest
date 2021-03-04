@@ -1,7 +1,6 @@
 package programers.level1;
 
-import java.util.Arrays;
-
+// 최소공배수와 최대공약수
 public class MinimumAndMaximum {
 
     public int[] solution(int n, int m) {
@@ -26,9 +25,4 @@ public class MinimumAndMaximum {
         return answer;
     }
 
-    public static void main(String[] args) {
-        MinimumAndMaximum minimumAndMaximum = new MinimumAndMaximum();
-
-        System.out.println(Arrays.toString(minimumAndMaximum.solution(36, 48)));
-    }
 }

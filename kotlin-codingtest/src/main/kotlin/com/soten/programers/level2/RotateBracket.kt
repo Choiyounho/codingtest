@@ -50,3 +50,13 @@ class RotateBracket {
 		return true
 	}
 }
+ /*
+ 	  when (list[i]) {
+					'(', '{', '[' -> stack.push(list[i])  여는 괄호일 시, 스택에 넣어주기
+					')' -> if (stack.peek() != '(') return false else stack.pop()
+					'}' -> if (stack.peek() != '{') return false else stack.pop()
+					']' -> if (stack.peek() != '[') return false else stack.pop()
+				}
+
+				닫힌 괄호일때 여는 괄호랑 짝이 맞으면 넘어가고, 아니면 false
+  */

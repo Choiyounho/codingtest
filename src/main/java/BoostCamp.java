@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class BoostCamp {
 
    /*
@@ -50,6 +53,45 @@ public class BoostCamp {
             return 0;
         }
         return 1;
+    }
+
+    // 6번
+    public static void main(String[] args) {
+        int[] arr = {4, 3, 2, 2, 6, 2, 1, 1, 6};
+
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            list.add(arr[i]);
+        }
+
+        List<Integer> list2 = new ArrayList<>();
+        int count = 0;
+
+        while (!list.isEmpty()) {
+            Integer temp = list.get(0);
+            while (true) {
+                if (list.contains(temp)) {
+                    list.remove(temp);
+                    count++;
+                } else {
+                    break;
+                }
+            }
+
+            if (count == 1) {
+                count = 0;
+                continue;
+            }
+            list2.add(count);
+            count = 0;
+        }
+
+        if (list2.isEmpty()) {
+            System.out.println(-1);
+            return;
+        }
+
+        System.out.println(list2);
     }
     
 }

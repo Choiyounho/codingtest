@@ -16,5 +16,19 @@ public class BoostCamp {
         48 + 23 == 71
         정답은 71
      */
+
+    // 3번
+    private void exam3() {
+        // 1 + 8 + 15 + 22 + 29 + 36 + 43 + 50 + 57 + 64 + 71 + 78 + 85 + 92 + 99
+        // 99일 때, 7을 더하면 100이 넘어가기 때문에 총 15번
+
+        int count = 0;
+        for (int i = 1; i <= 100; i += 7) {
+            count++;
+        }
+
+        // 15
+        System.out.println(count);
+    }
     
 }

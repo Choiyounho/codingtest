@@ -42,5 +42,14 @@ public class BoostCamp {
             count++;
         }
     }
+
+    // 5번
+    int foo(int year) {
+        // 평년이 되는 조건을 고른다. 정답 : 4번
+        if ((year % 4 != 0 || year % 100 == 0) && year % 400 != 0) {
+            return 0;
+        }
+        return 1;
+    }
     
 }

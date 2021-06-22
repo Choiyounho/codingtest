@@ -30,5 +30,17 @@ public class BoostCamp {
         // 15
         System.out.println(count);
     }
+
+    // 4번
+    private void exam4() {
+        int sum = 0;
+        int count = 1;
+
+        // count 100까지 더하고, 101부터는 false라 반복문 종료
+        while (count < 101) {
+            sum = sum + count;
+            count++;
+        }
+    }
     
 }

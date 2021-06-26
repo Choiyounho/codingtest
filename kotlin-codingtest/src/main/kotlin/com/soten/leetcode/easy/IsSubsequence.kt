@@ -3,15 +3,16 @@ package com.soten.leetcode.easy
 fun isSubsequence(s: String, t: String): Boolean {
 	if (s == "") return true
 
-	var pointS = 0
-	var pointT = 0
+	var sMatch: Int = 0
+	var tMatch: Int = 0
 
-	while (pointS < s.length && pointT < t.length) {
-		if (s[pointS] == t[pointT]) {
-			pointS++
+	while (sMatch < s.length && tMatch < t.length) {
+		if (s[sMatch] == t[tMatch]) {
+			sMatch++
 		}
-		pointT++
+		tMatch++
 	}
 
-	return pointS == s.length
+	return sMatch == s.length
 }
+

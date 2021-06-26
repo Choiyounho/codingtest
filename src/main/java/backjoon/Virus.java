@@ -32,7 +32,7 @@ public class Virus {
         System.out.println(count - 1);
         check = new int[matrix.length];
         int answer = 0;
-        System.out.println(BFS(matrix,check,start, answer));
+        System.out.println(BFS(matrix, check, start, answer));
     }
 
     public static int DFS(int[][] matrix, int[] check, int start, int count) {

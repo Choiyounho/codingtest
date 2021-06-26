@@ -22,7 +22,7 @@ fun solution(lottos: IntArray, win_nums: IntArray): IntArray {
 	return intArrayOf(level(last + zeroCount), level(last))
 }
 
-fun level(n: Int): Int { 
+fun level(n: Int): Int {
 	if (n == 2) return 5
 	if (n == 3) return 4
 	if (n == 4) return 3

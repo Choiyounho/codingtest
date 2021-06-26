@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class BoostCamp {
 
@@ -59,39 +58,25 @@ public class BoostCamp {
     public static void main(String[] args) {
         int[] arr = {4, 3, 2, 2, 6, 2, 1, 1, 6};
 
-        List<Integer> list = new ArrayList<>();
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+
         for (int i = 0; i < arr.length; i++) {
-            list.add(arr[i]);
-        }
-
-        List<Integer> list2 = new ArrayList<>();
-        int count = 0;
-
-        while (!list.isEmpty()) {
-            Integer temp = list.get(0);
-            while (true) {
-                if (list.contains(temp)) {
-                    list.remove(temp);
-                    count++;
-                } else {
-                    break;
-                }
-            }
-
-            if (count == 1) {
-                count = 0;
+            if (map.containsKey(arr[i])) {
+                map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
                 continue;
             }
-            list2.add(count);
-            count = 0;
+
+            map.put(arr[i], 1);
         }
 
-        if (list2.isEmpty()) {
-            System.out.println(-1);
-            return;
+        List<Integer> list = new ArrayList<>();
+
+        for (int key : map.keySet()) {
+            if (map.get(key) > 1) {
+                list.add(map.get(key));
+            }
         }
 
-        System.out.println(list2);
+        System.out.println(list);
     }
-    
 }

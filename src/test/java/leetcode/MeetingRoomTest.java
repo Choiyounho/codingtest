@@ -1,5 +1,6 @@
 package leetcode;
 
+import leetcode.easy.MeetingRoom;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

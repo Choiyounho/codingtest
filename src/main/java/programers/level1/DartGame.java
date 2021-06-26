@@ -52,7 +52,6 @@ public class DartGame {
         for (int k = 0; k < optionEffect.length; k++) {
             option = getCalculate(option, optionEffect, k);
             if (optionEffect[k].equals("*")) {
-
                 bonus *= 2;
                 option *= 2;
             }

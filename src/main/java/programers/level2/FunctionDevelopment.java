@@ -16,7 +16,7 @@ public class FunctionDevelopment {
         }
 
         int peekNum = 0;
-        
+
         while (!q.isEmpty()) {
             int count = 0;
 

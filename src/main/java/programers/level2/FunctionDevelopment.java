@@ -15,10 +15,9 @@ public class FunctionDevelopment {
             q.offer(progresses[i]);
         }
 
-
         int peekNum = 0;
-
-        while(!q.isEmpty()) {
+        
+        while (!q.isEmpty()) {
             int count = 0;
 
             peekNum = q.peek() + ((speeds[index] * day));
@@ -54,5 +53,4 @@ public class FunctionDevelopment {
         }
         return answer;
     }
-
 }

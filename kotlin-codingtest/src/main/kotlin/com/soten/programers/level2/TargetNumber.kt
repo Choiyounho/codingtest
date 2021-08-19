@@ -1,10 +1,8 @@
 package com.soten.programers.level2
 
-import java.util.*
+private var answer = 0
 
-var answer = 0
-
-fun solution(numbers: IntArray, target: Int): Int {
+private fun solution(numbers: IntArray, target: Int): Int {
 	targeting(target, 0, numbers, 0)
 	return answer
 }

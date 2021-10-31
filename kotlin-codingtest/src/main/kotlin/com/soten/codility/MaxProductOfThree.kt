@@ -3,10 +3,8 @@ package com.soten.codility
 import kotlin.math.max
 
 class MaxProductOfThree {
-
-	fun solution(arr: IntArray): Int {
-		arr.sort()
-		return max(arr[0] * arr[1] * arr[arr.size - 1], arr[arr.size - 1] * arr[arr.size - 2] * arr[arr.size - 3])
+	fun solution(A: IntArray): Int {
+		A.sort()
+		return max(A[0] * A[1] * A[A.size - 1], A[A.size - 1] * A[A.size - 2] * A[A.size - 3])
 	}
-
 }

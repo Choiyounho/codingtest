@@ -9,7 +9,6 @@ private fun solution(s: String): Int {
 	var blankString = ""
 
 	for (i in s.indices) {
-		// 48 ~ 57   숫자 0 부터 9
 		if (s[i].toInt() in 48..57) {
 			val transFormNumber = Character.getNumericValue(s[i])
 			answerList.add(transFormNumber)
@@ -23,8 +22,6 @@ private fun solution(s: String): Int {
 			}
 		}
 	}
-
-	// 키값을 받아와서 키 값에 해당하는 값이 있으면 replace
 
 	for (i in 0 until answerList.size) {
 		answer += answerList[i]

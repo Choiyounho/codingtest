@@ -1,7 +1,7 @@
 package com.soten.programers.level1
 
 
-fun solution(num: Int): Int {
+private fun solution(num: Int): Int {
 	var answer = 0
 	var number = num
 	while (true) {
